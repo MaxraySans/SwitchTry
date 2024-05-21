@@ -22,7 +22,7 @@ public class MaterialiPeso
         materiale = tastiera.nextLine();
         System.out.printf("Inserisci il volume: ");
         volume = tastiera.nextDouble();
-        pesospecifico = MetodiPeso.PesoSpecifico(materiale);
+        pesospecifico = MetodiPeso.pesoSpecifico(materiale);
         peso = volume * pesospecifico;
         System.out.println("Il peso del materiale inserito sarà di " + peso + " N\n");
     }

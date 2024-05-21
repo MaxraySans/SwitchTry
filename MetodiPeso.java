@@ -10,9 +10,10 @@ package com.mycompany.mavenproject1;
  */
 public class MetodiPeso 
 {
-    public static double PesoSpecifico (String materiale)
+    public static double pesoSpecifico (String materiale)
     {
-        materiale = Minuscolo(materiale);
+        materiale = minuscolo(materiale);
+        materiale = trimmer(materiale);
         double pesospecifico = 0;
         switch (materiale)
         {
@@ -22,14 +23,22 @@ public class MetodiPeso
             break;
             case "vetro": pesospecifico = 25.0;
             break;
+            default: System.out.printf("Non hai inserito uno materiali tra acqua, petrolio o vetro. \n");
         }
         return pesospecifico;
     }
     
-    public static String Minuscolo(String T)
+    public static String minuscolo(String T)
     {
         String t;
         t = T.toLowerCase();
+        return t;
+    }
+    
+    public static String trimmer(String T)
+    {
+        String t;
+        t = T.trim();
         return t;
     }
 }
